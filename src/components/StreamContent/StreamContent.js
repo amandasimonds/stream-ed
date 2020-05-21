@@ -1,12 +1,12 @@
 import React from "react";
 
-import styles from "./StreamContent.module.css"
+import classes from "./StreamContent.css"
 
 const streamContent = (props) => (
-    <div className={styles.StreamContent}>
-    <button>Class Stream</button>
-    <button>My Work</button>
-    <button>Live Streams</button>
+    <div className={classes.StreamContent}>
+    Class Stream
+    My Work
+    Live Streams
     </div>
 )
 
