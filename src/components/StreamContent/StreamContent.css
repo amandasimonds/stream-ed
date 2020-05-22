@@ -1,4 +1,19 @@
 .StreamContent {
-    margin: auto;
-    color: green;
+    margin: 70px 20px 20px 20px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px black;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.Category {
+    height: 70px;
+    width:120px;
+    font-family: "Open Sans";
+    font-size: 1rem;
+    background-color: #38c3f6;
+    border-radius: 2px;
+    margin:10px;
+    border: none;
 }
