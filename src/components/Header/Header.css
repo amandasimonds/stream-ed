@@ -4,11 +4,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #fedd22;
+    background-color:#b9eafc;
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 90;
+}
+
+.UserPic{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 50%;
 }

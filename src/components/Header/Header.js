@@ -1,11 +1,13 @@
 import React from 'react';
 import classes from "./Header.css";
-import homeIcon from "../../assets/images/homeicon.png"
+import homeIcon from "../../assets/images/homeicon.png";
+import UserPic from "../UserPic/UserPic"
 
 const Header = (props) => (
     
         <div className={classes.Header}>
-            <div>{props.name}</div>
+            <div>{props.name}</div> 
+            <div className={classes.UserPic}><UserPic /></div>
             <div>{props.type}</div> 
             <div><img src={homeIcon} style={{height:"18px", display:"inline-block"}} alt="home"></img> {props.homeroom}</div>
             <div>Log Out</div>

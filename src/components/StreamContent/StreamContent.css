@@ -3,17 +3,34 @@
     border: 1px solid gray;
     box-shadow: 1px 1px 1px black;
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px 100px 10px 100px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    z-index:999;
 }
 
 .Category {
-    height: 70px;
-    width:120px;
+    height: 60px;
+    width: 140px;
     font-family: "Open Sans";
     font-size: 1rem;
     background-color: #38c3f6;
     border-radius: 2px;
     margin:10px;
     border: none;
+}
+
+@media (max-width:500px) {
+    .StreamContent {
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .Category{
+        padding:5px;
+        height: 40px;
+        margin:5px;
+        font-size: 0.8rem;
+    }
 }
