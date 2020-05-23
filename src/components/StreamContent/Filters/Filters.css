@@ -1,0 +1,22 @@
+.Filters {
+    border-radius:20%;
+    margin: 5px;
+    padding: 3px;
+    font-size: 1rem
+}
+
+.Classes {
+    background-color: #a9cf48;
+}
+
+.Announcements {
+    background-color: #00ac5b;
+}
+
+.Classes2 {
+    background-color: #fedd22;
+}
+
+.Teacher {
+    background-color: #38c3f6;
+}
