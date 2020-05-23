@@ -1,7 +1,8 @@
 .SideDrawer{
-    background-color:#00ac5b;
+    background-color: white;
     width:280px;
     max-width: 70%;
+    height: 100%;
     left: 0;
     top: 0;
     z-index:20;
