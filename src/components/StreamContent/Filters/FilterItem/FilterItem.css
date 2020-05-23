@@ -1,0 +1,34 @@
+.FilterItem {
+    border-radius:20px;
+    margin: 5px;
+    padding: 5px 20px 5px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    min-width: 70px;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 0.1rem;
+    line-height: 14px;
+}
+
+.FilterItem:first-of-type {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.Subject {
+    background-color: #a9cf48;
+}
+
+.Announcement {
+    background-color: #00ac5b;
+}
+
+.Subject2 {
+    background-color: #fedd22;
+}
+
+.Teacher {
+    background-color: #38c3f6;
+}

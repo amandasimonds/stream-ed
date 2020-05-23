@@ -22,7 +22,7 @@ class Layout extends Component {
     render() {
         return (
             <Aux>
-                <SideDrawer/>
+                <SideDrawer />
                 <Header
                     name={this.state.user.name}
                     type={this.state.user.type}

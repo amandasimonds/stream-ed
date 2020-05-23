@@ -5,9 +5,8 @@
     border-radius: 20px;
     padding: 10px 100px 10px 100px;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
     z-index:999;
+    height: auto;
 }
 
 .Category {
@@ -20,6 +19,11 @@
     margin:10px;
     border: none;
     cursor: pointer;
+}
+
+.CategoryContainer{
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width:500px) {
