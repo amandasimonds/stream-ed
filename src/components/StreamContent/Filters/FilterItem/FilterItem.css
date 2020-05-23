@@ -6,16 +6,16 @@
     cursor: pointer;
     border: none;
     min-width: 70px;
+    height:35px;
     text-align: center;
     text-transform: lowercase;
-    letter-spacing: 0.1rem;
-    line-height: 14px;
+    letter-spacing: 0.05rem;
 }
 
-.FilterItem:first-of-type {
+/* .FilterItem:first-of-type {
     margin-left: 0;
     padding-left: 0;
-}
+} */
 
 .Subject {
     background-color: #a9cf48;
@@ -31,4 +31,16 @@
 
 .Teacher {
     background-color: #38c3f6;
+}
+
+@media (max-width: 500px) {
+    .FilterItem{
+        height: auto;
+        font-size: .7rem;
+        min-width:auto;
+        padding:2px 5px 2px 5px;
+        margin:2px;
+        letter-spacing: normal;
+    }
+
 }

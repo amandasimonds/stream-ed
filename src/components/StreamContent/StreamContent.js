@@ -6,11 +6,13 @@ import Filters from "./Filters/Filters"
 class StreamContent extends Component {
 
     state = {
-        filters: {
-            class: 1,
-            Announcements: 1,
-            Teacher: 2
-        }
+        filters: [
+            {type: "Subject", text: "social studies"},
+            {type: "Announcement", text: "announcements"},
+            {type: "Teacher", text: "teacher"},
+            {type: "Subject", text: "math"},
+            {type: "Subject", text: "language arts"},
+        ]
     }
     render() {
         return (
@@ -21,7 +23,8 @@ class StreamContent extends Component {
                 <button className={classes.Category}>Live Streams</button>
                 </div>
                 <Filters
-                    filters={this.state.filters} />
+                    filters={this.state.filters}
+                    text={this.state.filters.text} />
             </div>
         )
     }

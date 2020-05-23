@@ -1,15 +1,27 @@
-import React, {Component} from "react"
+import React, { Component } from "react"
 
 import classes from "./Filters.css";
 import FilterItem from "./FilterItem/FilterItem"
 
 class Filters extends Component {
-    componentDidUpdate(){
+    componentDidUpdate() {
         console.log("[Filters] Will update")
     }
 
-    render(){
-        
+    render() {
+
+        return this.props.filters.map((filter, index) => {
+
+            return (
+                <div className={classes.Filters}>
+                    <FilterItem
+                        filterType={filter.type}>
+                            {filter.text}
+                    </FilterItem>
+                </div>
+            )
+        }
+        )
 
         // const filterItems = Object.keys(this.props.filters)
         // .map(filterKey => {
@@ -19,12 +31,7 @@ class Filters extends Component {
         //         filterType="Announcement">{this.props.filters[filterKey]}</FilterItem>
         //     )
         // })
-        return(
-            <div className={classes.Filters}>
-           <FilterItem 
-                filterType="Subject">Art</FilterItem>
-                </div>
-        )
+
     }
 }
 
