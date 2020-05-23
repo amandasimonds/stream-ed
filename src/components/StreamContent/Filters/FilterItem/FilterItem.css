@@ -10,6 +10,7 @@
     text-align: center;
     text-transform: lowercase;
     letter-spacing: 0.05rem;
+    display: flex;
 }
 
 /* .FilterItem:first-of-type {
@@ -25,7 +26,7 @@
     background-color: #00ac5b;
 }
 
-.Subject2 {
+.LiveStream {
     background-color: #fedd22;
 }
 

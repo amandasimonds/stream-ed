@@ -1,0 +1,36 @@
+.StreamPost {
+    margin: 5px;
+    padding: 15px;
+    height:auto;
+    width:200px;
+    border-radius: 2px;
+    border: none;
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+    text-align: left;
+}
+
+.Assignment {
+    background-color: #a9cf48;
+}
+
+.Announcement {
+    background-color: #00ac5b;
+}
+
+.LiveStream {
+    background-color: #fedd22;
+}
+
+.Teacher {
+    background-color: #38c3f6;
+}
+
+@media (max-width:500px) {
+    .StreamPost {
+        font-size: 0.75rem;
+        width: 220px;
+        padding:8px;
+    }
+}
