@@ -3,6 +3,7 @@ import React from 'react';
 import classes from "./SideDrawer.css";
 import Aux from "../../hoc/Auxiliary";
 import Backdrop from "../UI/Backdrop/Backdrop";
+import Calendar from "./Calendar/Calendar";
 
 const SideDrawer = (props) => {
 
@@ -15,7 +16,7 @@ const SideDrawer = (props) => {
             <Backdrop show={props.open} clicked={props.closed}/>
         <div className={attachedClasses.join(" ")}>
             Announcements
-            Calendar
+            <Calendar/>
         </div>
         </Aux>
     )
