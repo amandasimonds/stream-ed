@@ -4,6 +4,7 @@ import classes from "./Layout.css"
 import Aux from "../../hoc/Auxiliary"
 import Header from "../Header/Header"
 import SideDrawer from "../SideDrawer/SideDrawer"
+import HeaderItems from "../Header/HeaderItems/HeaderItems"
 
 class Layout extends Component {
 
@@ -21,25 +22,27 @@ class Layout extends Component {
     }
 
     sideDrawerClosedHandler = () => {
-        this.setState({showSideDrawer: false})
+        this.setState({ showSideDrawer: false })
     }
 
     sideDrawerToggleHandler = () => {
         this.setState((prevState) => {
-            return {showSideDrawer: !prevState.showSideDrawer}
-    } )
-};
+            return { showSideDrawer: !prevState.showSideDrawer }
+        })
+    };
 
     render() {
         return (
             <Aux>
-                <SideDrawer 
-                open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler}/>
-                <Header
-                    name={this.state.user.name}
-                    type={this.state.user.type}
-                    homeroom={this.state.user.homeroom} 
-                    drawerToggleClicked={this.sideDrawerToggleHandler}/>
+                <SideDrawer
+                    open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler} />
+                <Header>
+                    <HeaderItems
+                        drawerToggleClicked={this.sideDrawerToggleHandler}
+                        name={this.state.user.name}
+                        type={this.state.user.type}
+                        homeroom={this.state.user.homeroom} />
+                </Header>
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>

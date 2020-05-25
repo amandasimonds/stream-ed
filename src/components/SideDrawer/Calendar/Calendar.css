@@ -1,3 +1,6 @@
 .Calendar {
     background-color: white;
+    border: 1px solid lightgray;
+    margin: 5px 5px 15px 5px;
+    padding: 5px;
 }

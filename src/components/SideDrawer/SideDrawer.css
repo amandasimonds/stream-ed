@@ -1,6 +1,6 @@
 .SideDrawer{
     position: fixed;
-    color:green;
+    background-color: white;
     width:280px;
     max-width: 70%;
     height: 100%;
@@ -12,8 +12,10 @@
     transition: transform 0.3s ease-out;
 }
 
-.Menu{
-    background-color: white;
+.Announcements{
+    border: 1px solid lightgray;
+    margin:5px;
+    padding:5px;
 }
 
 .Open {
