@@ -12,10 +12,10 @@ As a former teacher, thrown into online teaching during the current world situat
 
 Feel free to give me any suggestions. 
 
-# Desktop View
+### Desktop View
 
 ![](/src/assets/images/StreamEd.JPG) 
 
-# Mobile View
+### Mobile View
 
 ![](/src/assets/images/streamedmobile.JPG)
