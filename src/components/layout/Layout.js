@@ -4,7 +4,7 @@ import classes from "./Layout.css"
 import Aux from "../../hoc/Auxiliary"
 import Header from "../Header/Header"
 import SideDrawer from "../SideDrawer/SideDrawer"
-import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle"
+
 class Layout extends Component {
 
     state = {
@@ -17,7 +17,7 @@ class Layout extends Component {
             homeroom: "Mrs. Wellman"
         },
         announcement1: "New Zoom Rules",
-        showSideDrawer: true
+        showSideDrawer: false
     }
 
     sideDrawerClosedHandler = () => {

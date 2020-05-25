@@ -15,8 +15,10 @@ const SideDrawer = (props) => {
         <Aux>
             <Backdrop show={props.open} clicked={props.closed}/>
         <div className={attachedClasses.join(" ")}>
-            Announcements
+            <div className={classes.Menu}>
+                Announcements
             <Calendar/>
+                </div>
         </div>
         </Aux>
     )

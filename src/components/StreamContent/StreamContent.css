@@ -1,8 +1,9 @@
 .StreamContent {
     text-align: center;
-    z-index:999;
     height: auto;
     display: block;
+    width:80%;
+    margin: auto;
 }
 
 .Category {
