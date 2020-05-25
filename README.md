@@ -10,10 +10,12 @@ As a former teacher, thrown into online teaching during the current world situat
 
 - This project is in progress. While I have the wireframe and mobile responsiveness layout carved out, I have set up the components so they are ready to be used dynamically. This is an app I am working on as I gain more experience with ReactJS.
 
-Feel free to give me any suggestions.
+Feel free to give me any suggestions. 
 
-![](/src/assets/images/StreamEd.JPG)
+# Desktop View
 
-**Mobile View**
+![](/src/assets/images/StreamEd.JPG) 
+
+# Mobile View
 
 ![](/src/assets/images/streamedmobile.JPG)
