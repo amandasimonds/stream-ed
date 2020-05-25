@@ -10,4 +10,4 @@ Feel free to give me any suggestions.
 
 ![](/src/assets/images/StreamEd.JPG)
 
-![](/src/assets/images/streamedMobile.JPG)
+![](/src/assets/images/streamedmobile.JPG)
