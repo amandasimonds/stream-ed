@@ -15,7 +15,7 @@ const landingPage = (props) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            paddingTop:"70px"
+            paddingTop:"100px"
         }}>
 
         <AnimatedBG/>

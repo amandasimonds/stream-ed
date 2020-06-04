@@ -14,9 +14,9 @@ class App extends Component {
     return (
       <HashRouter>
       <div>
-       <Layout>
+    
          <Stream />
-       </Layout>
+       
       </div>
       </HashRouter>
     );
