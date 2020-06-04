@@ -1,10 +1,32 @@
-.LandingPage {
-    padding:40px;
-    margin:40px;
-    background-color: ;
+.container{
+    width: 50%;
+    margin-top:70px;
+    border:1px solid rgb(255, 255, 255);
+    border-radius:20px;
+    padding:20px;
+    text-align: center;
+    background:rgba(255, 255, 255, 0.582)
 }
 
-/* h1 {
-    font-family: Royalacid;
-    font-size: 200px;
-} */
+.background {
+    width:100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    font-size:80px;
+}
+
+.button {
+    background-color:#38C3F6;
+    border-radius:5px;
+    padding: 10px 25px 10px 25px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    font-size:21px;
+    margin: 10px;
+}

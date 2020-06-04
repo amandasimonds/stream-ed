@@ -1,23 +1,26 @@
 import React from "react";
-import {Jumbotron, Button} from "reactstrap"
 import classes from "./LandingPage.css"
 import {Link} from "react-router-dom"
 import "./LandingPage.css"
+import "../../index.css"
+import AnimatedBG from "../UI/AnimatedBG/AnimatedBG"
+import animatedBG from "../UI/AnimatedBG/AnimatedBG";
 
 const landingPage = (props) => {
     return(
-    <div>
-      <Jumbotron fluid className={classes.LandingPage}>
-        <h1 className="display-3">Stream Ed</h1>
-        <p className="lead"></p>
-        <hr className="my-2" />
-        <p></p>
-        <p className="lead">
-          <Link to="/stream"><Button color="primary">Login</Button></Link>
-          <Button color="primary">Sign Up</Button>
-        </p>
-      </Jumbotron>
+        <div>
+
+        <AnimatedBG/>
+    <div className={classes.background}>
+        <div className={classes.container}>
+
+      <h1>Stream Ed</h1>
+      <p>Streamline learning and teaching, so we can focus on meaningful, engaging education.</p>
+      <button className={classes.button}>Log In</button>
+      <button className={classes.button}>Sign Up <i class="fab fa-suse"></i></button>
+        </div>
     </div>
+        </div>
     )
     }
 
