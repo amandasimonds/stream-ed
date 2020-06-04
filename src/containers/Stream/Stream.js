@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-
+import {Route} from "react-router"
 import Aux from "../../hoc/Auxiliary"
 import StreamContent from '../../components/StreamContent/StreamContent';
+import LandingPage from "../../components/LandingPage/LandingPage"
 
 class Stream extends Component {
   state = {
@@ -19,7 +20,8 @@ class Stream extends Component {
   render() {
     return (
       <Aux>
-        <StreamContent/>
+        <Route path="/" exact component={LandingPage}/>
+        <Route path ="/stream" exact component={StreamContent}/>
       </Aux>
     );
   }

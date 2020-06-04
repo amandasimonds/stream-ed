@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
 }
+
+@font-face {
+  font-family: 'Royalacid';
+  src: local('Royalacid'), url("./assets/fonts/Royalacid_o.ttf") format('truetype');
+}
