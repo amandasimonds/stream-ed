@@ -3,7 +3,7 @@ import classes from "./HeaderItems.css"
 import homeIcon from "../../../assets/images/homeicon.png"
 import UserPic from "../../UserPic/UserPic"
 import DrawerToggle from "../../SideDrawer/DrawerToggle/DrawerToggle"
-import Link from "react-router-dom"
+import {Link} from "react-router-dom"
 
 const headerItems = (props) => (
     <div className={classes.HeaderItems}>
