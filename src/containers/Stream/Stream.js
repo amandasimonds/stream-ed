@@ -26,8 +26,8 @@ class Stream extends Component {
       <Aux>
         <Route path="/" exact component={LandingPage}/>
         <Route path ="/stream" exact component={StreamContent}/>
-        <Route path="/chooselogintype" exact component={ChooseLogInType}/>
-        <Route path ="/choosesignuptype" exact component={ChooseSignUpType}/>
+        <Route path="/chooselogintype" component={ChooseLogInType}/>
+        <Route path ="/choosesignuptype" component={ChooseSignUpType}/>
         <Route path ="/login" component={LogIn}/>
         <Route path ="/signup" component={SignUp}/>
       </Aux>
