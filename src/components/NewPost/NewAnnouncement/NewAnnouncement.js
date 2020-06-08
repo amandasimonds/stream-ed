@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { Redirect } from "react-router-dom"
 import classes from "../NewPost.css"
 import Layout from "../../layout/Layout"
+import axios from "../../../axios-assignments"
 
 class NewAnnouncement extends Component {
     state = {
@@ -22,10 +22,11 @@ class NewAnnouncement extends Component {
         const data = {
             title: this.state.title,
             body: this.state.content,
-            author: this.state.author
+            author: this.state.author,
+            date: this.state.date
         }
 
-        axios.post("/posts", data)
+        axios.post("/", data)
             .then(response => {
                 console.log(response)
                 this.setState({ submitted: true })
