@@ -1,8 +1,7 @@
 .announcements{
     float: left;
     margin:10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 10px;
     height: 200px;
     width: 200px;
     border: 1px solid gray;
@@ -10,7 +9,7 @@
     text-align: left;
 }
 
-h1{
-    font-size: 24px;
+.announcements h1{
+    font-size: 18px;
     text-align: center
 }

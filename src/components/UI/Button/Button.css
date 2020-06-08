@@ -7,7 +7,8 @@
     font: inherit;
     padding: 10px;
     margin: 10px;
-    font-weight: bold;
+    text-align: center;
+    border-radius:10px
 }
 
 .Button:first-of-type {
@@ -16,9 +17,9 @@
 }
 
 .Success {
-    color: #5C9210;
+    background-color: #5C9210;
 }
 
 .Danger {
-    color: #944317;
+    background-color: #f30000;
 }

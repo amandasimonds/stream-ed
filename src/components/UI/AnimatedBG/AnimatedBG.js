@@ -1,9 +1,6 @@
 import React from "react";
 
 import Sky from "react-sky";
-import triangle from "./Icons/triangle.png"
-import triangle2 from "./Icons/triangle2.png"
-import circle from "./Icons/circle.png"
 
 const animatedBG = (props) => (
     <div>

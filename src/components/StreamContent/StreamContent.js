@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import classes from "./StreamContent.css"
 import Filters from "./Filters/Filters"
 import StreamPosts from "./StreamPosts/StreamPosts";
-import Layout from "../layout/Layout"
+// import Layout from "../layout/Layout"
 
 class StreamContent extends Component {
 
@@ -25,8 +25,7 @@ class StreamContent extends Component {
     }
     render() {
         return (
-            <Layout>
-
+            
             <div className={classes.StreamContent}>
                 <div className={classes.CategoryContainer}>
                 <button className={classes.Category}>Class Stream</button>
@@ -41,7 +40,7 @@ class StreamContent extends Component {
                     title={this.state.posts.title}
                     text={this.state.posts.text} />
             </div>
-                    </Layout>
+                    
         )
     }
 }

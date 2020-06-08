@@ -1,0 +1,40 @@
+.NewPost {
+    width: 500px;
+    margin: 30px auto;
+    background-color: #00ac5b;
+    border-radius:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align:center;
+}
+
+.NewPost input, textarea{
+    padding: 5px;
+    border-radius:5px;
+    margin:0 0 10px 0;
+    width:80%;
+    border: 1px solid lightgray
+}
+
+.NewPost textarea{
+    margin:0 0 10px 0;
+}
+
+.NewPost h1 {
+    font-size:22px;
+    color:white
+}
+
+.NewPost hr {
+    color:black;
+    width: 80%;
+}
+
+.NewPost button{
+    border:none;
+    border-radius: 5px;
+    padding:5px 15px 5px 15px;
+}

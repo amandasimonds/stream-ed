@@ -1,13 +1,32 @@
-import React from 'react';
-import "./Announcements.css";
+import React, {Component} from 'react';
+import classes from "./Announcements.css";
 
-const Announcements = (props) => {
-    return (
-        <div className="announcements">
+class Announcements extends Component {
+
+    state = {
+        announcements:[
+            "Talent Show 3/12",
+            "Social Studies Project due 4/2"
+        ]
+    }
+
+    render(){  
+
+        console.log(this.state.announcements)
+
+        let announcements = (this.state.announcements)
+            .map(key => {
+                return <div className={classes.announcement}>{key}</div>
+            })
+
+            console.log("mapped announcements", announcements)
+        return (
+            <div className={classes.announcements}>
             <h1>Announcements</h1>
-            <p>{props.announcement1}</p>
+            <p>{announcements}</p>
         </div>
     )
+}
 };
 
 export default Announcements;

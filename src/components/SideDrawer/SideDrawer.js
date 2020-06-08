@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import classes from "./SideDrawer.css";
 import Aux from "../../hoc/Auxiliary";
 import Backdrop from "../UI/Backdrop/Backdrop";
-import Calendar from "./Calendar/Calendar";
+import Announcements from "../Announcements/Announcements"
+import Button from "../UI/Button/Button"
 
 const SideDrawer = (props) => {
 
@@ -15,11 +17,9 @@ const SideDrawer = (props) => {
         <Aux>
             <Backdrop show={props.open} clicked={props.closed}/>
         <div className={attachedClasses.join(" ")}>
-        <Calendar/>
-            <div className={classes.Announcements}>   
-            
-            Announcements
-                </div>
+            <Announcements/>
+            <Link to="/newassignment"><Button btnType="Success" style={{width:"200px"}}>Create Assignment</Button></Link>
+            <Link to="/newannouncement"><Button btnType="Success" style={{width:"200px"}}>Create Announcement</Button></Link>
         </div>
         </Aux>
     )

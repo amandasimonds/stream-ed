@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "./assets/fonts/Royalacid_o.ttf"
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
