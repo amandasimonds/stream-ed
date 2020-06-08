@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {HashRouter, Route, Switch} from "react-router-dom"
+import { HashRouter, Route, Switch } from "react-router-dom"
 
 // import Layout from "./components/layout/Layout";
 import Stream from "./containers/Stream/Stream";
@@ -13,27 +13,27 @@ import NewAssignment from "./components/NewPost/NewAssignment/NewAssignment"
 
 class App extends Component {
 
-  state={
+  state = {
     loggedIn: false,
   }
 
   render() {
     return (
       <HashRouter>
-      <div>
-      <Route path="/" exact component={LandingPage}/>
-        <Route path="/chooselogintype" component={ChooseLogInType}/>
-        <Route path ="/choosesignuptype" component={ChooseSignUpType}/>
-        <Route path ="/login" component={LogIn}/>
-        <Route path ="/signup" component={SignUp}/>
-         <Route path ="/stream" component={Stream}/>
+        <div>
+          <Route path="/" exact component={LandingPage} />
+          <Route path="/chooselogintype" component={ChooseLogInType} />
+          <Route path="/choosesignuptype" component={ChooseSignUpType} />
+          <Route path="/login" component={LogIn} />
+          <Route path="/signup" component={SignUp} />
+          <Route path="/stream" component={Stream} />
 
-         <Switch>
-         <Route path ="/newassignment" component={NewAssignment}/>
-        <Route path ="/newannouncement" component={NewAnnouncement}/>
-         </Switch>
-       
-      </div>
+          <Switch>
+            <Route path="/newassignment" component={NewAssignment} />
+            <Route path="/newannouncement" component={NewAnnouncement} />
+          </Switch>
+
+        </div>
       </HashRouter>
     );
   }

@@ -1,9 +1,11 @@
 .StreamContent {
     text-align: center;
     height: auto;
-    display: block;
+    display: flex;
+    flex-flow:column;
     width:80%;
     margin: auto;
+    height:100%;
 }
 
 .Category {
@@ -22,6 +24,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 90px 0 90px;
+    flex-wrap:wrap;
 }
 
 @media (max-width:500px) {
