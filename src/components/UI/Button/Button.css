@@ -23,3 +23,18 @@
 .Danger {
     background-color: #f30000;
 }
+
+.FilterItem {
+    border-radius:20px;
+    margin: 5px;
+    padding: 5px 20px 5px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    min-width: 70px;
+    height:35px;
+    text-align: center;
+    text-transform: lowercase;
+    letter-spacing: 0.05rem;
+    display: flex;
+}

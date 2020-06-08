@@ -1,0 +1,36 @@
+.Category {
+    height: 60px;
+    width: 200px;
+    font-family: 'Chelsea Market', cursive;
+    font-size: 1.4rem;
+    background-color: #38c3f6;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.CategoryContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 90px 0 90px;
+    flex-wrap:wrap;
+    margin:70px 0 0 0;
+    width:80%;
+    position: relative;
+    left:50px;
+    box-sizing: border-box;
+}
+
+@media (max-width:500px) {
+
+    .Category{
+        padding:5px;
+        height: 40px;
+        margin:5px;
+        font-size: 0.8rem;
+    }
+
+    .CategoryContainer{
+        padding: 0;
+    }
+}

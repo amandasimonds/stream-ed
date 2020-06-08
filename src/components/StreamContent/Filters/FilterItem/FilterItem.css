@@ -34,6 +34,18 @@
     background-color: #38c3f6;
 }
 
+.Classwork {
+    background-color: #38c3f6;
+}
+
+.Tests {
+    background-color: #fedd22;
+}
+
+.Homework {
+    background-color: #00ac5b;
+}
+
 @media (max-width: 500px) {
     .FilterItem{
         height: auto;

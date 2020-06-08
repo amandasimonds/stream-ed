@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-// import {Route, Switch} from "react-router-dom"
 
 import classes from "./Layout.css"
 import Aux from "../../hoc/Auxiliary"
 import Header from "../Header/Header"
 import SideDrawer from "../SideDrawer/SideDrawer"
 import HeaderItems from "../Header/HeaderItems/HeaderItems"
+import Nav from "./Nav/Nav"
 // import StreamContent from "../StreamContent/StreamContent";
 // import NewAnnouncement from "../NewPost/NewAnnouncement/NewAnnouncement"
 // import NewAssignment from "../NewPost/NewAssignment/NewAssignment"
@@ -47,6 +47,9 @@ class Layout extends Component {
                         type={this.state.user.type}
                         homeroom={this.state.user.homeroom} />
                 </Header>
+
+                <Nav/>
+
                 <main className={classes.Content}>
                     {this.props.children}
                 </main>

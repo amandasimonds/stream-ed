@@ -11,6 +11,7 @@ import StreamContent from '../../components/StreamContent/StreamContent';
 // import SignUp from "../../components/LandingPage/SignUp/SignUp"
 import NewAssignment from '../../components/NewPost/NewAssignment/NewAssignment';
 import NewAnnouncement from '../../components/NewPost/NewAnnouncement/NewAnnouncement';
+import MyWork from "../MyWork/MyWork"
 
 class Stream extends Component {
   state = {
@@ -40,6 +41,7 @@ class Stream extends Component {
         <Route path ="/stream" component={StreamContent}/>
         <Route path ="/newassignment" component={NewAssignment}/>
         <Route path ="/newannouncement" component={NewAnnouncement}/>
+        <Route path ="/mywork" component={MyWork}/>
         </Switch>
 
         </Layout>

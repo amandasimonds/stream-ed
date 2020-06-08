@@ -1,0 +1,23 @@
+.AssignmentsGrid{
+    width: 80%;
+    margin:20px auto;
+    border:1px solid black;  
+}
+
+.firstRow{
+    border:1px solid blue;
+    position:relative;
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.assignmentRow{
+    border:1px solid red;
+}
+
+.AssignmentsGrid h1{
+    font-size: 22px;
+    padding:5px;
+    margin:5px;
+}

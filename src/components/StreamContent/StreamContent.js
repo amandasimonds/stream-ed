@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import {Link, Route} from "react-router-dom"
 
 import classes from "./StreamContent.css"
 import Filters from "./Filters/Filters"
 import StreamPosts from "./StreamPosts/StreamPosts";
+import MyWork from "../../containers/MyWork/MyWork"
 // import Layout from "../layout/Layout"
 
 class StreamContent extends Component {
@@ -27,12 +29,6 @@ class StreamContent extends Component {
         return (
             <div className={classes.StreamContent}>
 
-                <div className={classes.CategoryContainer}>
-                    <button className={classes.Category}>Class Stream</button>
-                    <button className={classes.Category}>My Work</button>
-                    <button className={classes.Category}>Live Streams</button>
-                </div>
-
                 <div>
                     <Filters
                         filters={this.state.filters}
@@ -40,7 +36,7 @@ class StreamContent extends Component {
                 </div>
 
                 <br />
-                
+
                 <div>
                     <StreamPosts
                         posts={this.state.posts}
@@ -48,7 +44,11 @@ class StreamContent extends Component {
                         text={this.state.posts.text} />
                 </div>
 
+                <Route path="/mywork" component={MyWork}/>
+
             </div>
+
+            
 
         )
     }
