@@ -1,3 +1,35 @@
 .AssignmentRow{
     border:1px solid gray;
 }
+
+.row{
+    background-color: blue;
+}
+
+.subject{
+    grid-column-start: 1;
+    grid-column-end:2;
+    border-bottom: 1px solid gray;
+    padding:5px;
+}
+
+.type{
+    grid-column-start: 3;
+    grid-column-end:4;
+    border-bottom: 1px solid gray;
+    padding:5px;
+}
+
+.title{
+    grid-column-start: 4;
+    grid-column-end:5;
+    border-bottom: 1px solid gray;
+    padding:5px;
+}
+
+.description{
+    grid-column-start: 6;
+    grid-column-end:12;
+    border-bottom: 1px solid gray;
+    padding:5px;
+}

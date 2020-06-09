@@ -1,7 +1,14 @@
-.AssignmentsGrid{
+.container{
     width: 80%;
     margin:20px auto;
-    border:1px solid black;  
+    /* border:1px solid black; */
+}
+
+.AssignmentsGrid{ 
+    width: 100%;
+    position: relative;
+    display:grid; 
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .firstRow{
@@ -15,4 +22,32 @@
     font-size: 22px;
     padding:5px;
     margin:5px;
+}
+
+.subject{
+    grid-column-start: 1;
+    grid-column-end:2;
+    font-weight: bold;
+    padding:5px;
+}
+
+.type{
+    grid-column-start: 3;
+    grid-column-end:4;
+    font-weight: bold;
+    padding:5px;
+}
+
+.title{
+    grid-column-start: 4;
+    grid-column-end:5;
+    font-weight: bold;
+    padding:5px;
+}
+
+.description{
+    grid-column-start: 6;
+    grid-column-end:12;
+    font-weight: bold;
+    padding:5px;
 }

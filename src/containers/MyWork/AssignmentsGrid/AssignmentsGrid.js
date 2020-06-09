@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import axios from "../../../axios-assignments"
 
+import Aux from "../../../hoc/Auxiliary"
 import classes from "./AssignmentsGrid.css"
 
 import FilterItem from "../../../components/StreamContent/Filters/FilterItem/FilterItem";
@@ -29,38 +30,28 @@ class AssignmentsGrid extends Component {
             console.log(this.state.assignments)
             console.log("assignments loop", this.state.assignments[i].title)
             assignmentsBox.push(
-                    <Assignment
-                        title={this.state.assignments[i].title}
-                        body={this.state.assignments[i].body}
-                        subject={this.state.assignments[i].subject} />
-            )}
+                <Assignment
+                    title={this.state.assignments[i].title}
+                    body={this.state.assignments[i].body}
+                    subject={this.state.assignments[i].subject} />
+            )
+        }
 
         return (
-            <div className={classes.AssignmentsGrid}>
+            <div className={classes.container}>
                 <div className={classes.firstRow}>
-                    <h1>{this.props.subjectName}</h1>
+                    <h1>Assignments</h1>
                     <FilterItem filterType="Classwork">classwork</FilterItem>
                     <FilterItem filterType="Tests">Tests</FilterItem>
                     <FilterItem filterType="Homework">Homework</FilterItem>
                 </div>
-
-                {/* {this.state.assignments.map((assignmentsBox, key) => {
-                    // let assignmentsBox
-                    for (let i = 0; i < this.state.assignments.length; i++) {
-                        console.log(this.state.assignments)
-                        console.log("assignments loop", this.state.assignments[i].title)
-                        assignmentsBox = (
-                            <div key={key}>
-                                <Assignment
-                                    title={this.state.assignments[i].title}
-                                    body={this.state.assignments[i].body}
-                                    subject={this.state.assignments[i].subject} />
-                            </div>
-                        )}
-                    return assignmentsBox
-                })} */}
-                
-                {assignmentsBox}
+                <div className={classes.AssignmentsGrid}>
+                    <div className={classes.subject}>Subject</div>
+                    <div className={classes.type}>Type</div>
+                    <div className={classes.title}>Title</div>
+                    <div className={classes.description}>Description</div>
+                    {assignmentsBox}
+                </div>
             </div>
         )
     }
