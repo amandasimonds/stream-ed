@@ -13,7 +13,7 @@ class Announcements extends Component {
     render(){  
         let announcements = (this.state.announcements)
             .map(key => {
-                return <div className={classes.announcement}>{key}</div>
+                return <div key={key} className={classes.announcement}>{key}</div>
             })
             console.log("mapped announcements", announcements)
 

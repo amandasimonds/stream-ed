@@ -5,9 +5,9 @@ import StreamPost from "./StreamPost/StreamPost"
 
 class StreamPosts extends Component{
     render() {
-        return this.props.posts.map((post, index) => {
+        return this.props.posts.map((post, key) => {
             return (
-                <div className={classes.StreamPosts}>
+                <div key={key} className={classes.StreamPosts}>
                     <StreamPost
                         postType={post.type}>
                             <strong>{post.title}</strong>

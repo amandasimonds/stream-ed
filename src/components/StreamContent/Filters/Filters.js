@@ -10,10 +10,10 @@ class Filters extends Component {
 
     render() {
 
-        return this.props.filters.map((filter, index) => {
+        return this.props.filters.map((filter, key) => {
 
             return (
-                <div className={classes.Filters}>
+                <div key={key} className={classes.Filters}>
                     <FilterItem
                         filterType={filter.type}>
                             {filter.text}
