@@ -20,7 +20,7 @@ class Announcements extends Component {
         return (
             <div className={classes.announcements}>
             <h1>Announcements</h1>
-            <p>{announcements}</p>
+            <div>{announcements}</div>
         </div>
     )
 }
