@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Link, Route} from "react-router-dom"
+import {Route} from "react-router-dom"
 
 import classes from "./StreamContent.css"
 import Filters from "./Filters/Filters"

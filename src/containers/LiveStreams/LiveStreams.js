@@ -18,7 +18,9 @@ class LiveStreams extends Component {
   render() {
     return (
         <Layout>
+          <div className={classes.LiveStreams}>
             <h1>Live Streams</h1>
+          </div>
         </Layout>
     );
   }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Layout from "../../components/layout/Layout"
-import classes from "./MyWork.css";
 import AssignmentsGrid from "./AssignmentsGrid/AssignmentsGrid"
 
 class MyWork extends Component {
@@ -10,9 +9,9 @@ class MyWork extends Component {
     password: "",
     loggedIn: false,
     user : {
-      name: "Amanda",
-      type: "Student",
-      homeroom: "Mrs. Wellman"
+      name: "",
+      type: "",
+      homeroom: ""
     },
     assignments:{
         subject:{
