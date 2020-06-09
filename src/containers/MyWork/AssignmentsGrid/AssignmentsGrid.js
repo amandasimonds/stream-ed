@@ -23,7 +23,17 @@ class AssignmentsGrid extends Component {
 
     render() {
 
-        let assignmentsBox = null
+        const assignmentsBox = []
+
+        for (let i = 0; i < this.state.assignments.length; i++) {
+            console.log(this.state.assignments)
+            console.log("assignments loop", this.state.assignments[i].title)
+            assignmentsBox.push(
+                    <Assignment
+                        title={this.state.assignments[i].title}
+                        body={this.state.assignments[i].body}
+                        subject={this.state.assignments[i].subject} />
+            )}
 
         return (
             <div className={classes.AssignmentsGrid}>
@@ -34,7 +44,7 @@ class AssignmentsGrid extends Component {
                     <FilterItem filterType="Homework">Homework</FilterItem>
                 </div>
 
-                {this.state.assignments.map((assignmentsBox, key) => {
+                {/* {this.state.assignments.map((assignmentsBox, key) => {
                     // let assignmentsBox
                     for (let i = 0; i < this.state.assignments.length; i++) {
                         console.log(this.state.assignments)
@@ -48,7 +58,7 @@ class AssignmentsGrid extends Component {
                             </div>
                         )}
                     return assignmentsBox
-                })}
+                })} */}
                 
                 {assignmentsBox}
             </div>
