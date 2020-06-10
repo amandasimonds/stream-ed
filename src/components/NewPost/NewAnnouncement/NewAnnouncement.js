@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom"
 import classes from "../NewPost.css"
 import Layout from "../../layout/Layout"
-import axios from "../../../axios-assignments"
+import axios from "../../../axios"
 
 class NewAnnouncement extends Component {
     state = {

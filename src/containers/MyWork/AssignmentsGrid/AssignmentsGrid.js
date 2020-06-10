@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import axios from "../../../axios-assignments"
+import axios from "../../../axios"
 
 import Aux from "../../../hoc/Auxiliary"
 import classes from "./AssignmentsGrid.css"

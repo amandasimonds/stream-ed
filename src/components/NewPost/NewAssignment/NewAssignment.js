@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "../../../axios-assignments"
+import axios from "../../../axios"
 import { Redirect } from "react-router-dom"
 import classes from "../NewPost.css"
 
