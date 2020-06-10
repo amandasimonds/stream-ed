@@ -16,8 +16,12 @@ class AssignmentsGrid extends Component {
         axios.get("/liveStreams.json")
             .then(response => {
                 let liveStreams = response.data;
+                if(!liveStreams){
+                    return
+                } else {
                 let updatedLiveStreams = Object.values(liveStreams)
                 this.setState({ liveStreams: updatedLiveStreams })
+                }
             })
     };
 

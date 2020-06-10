@@ -19,15 +19,6 @@ class LiveStreams extends Component {
     },
  }
 
- componentDidMount(){
-  axios.get("/liveStreams.json")
-  .then(response => {
-      let liveStreams = response.data;
-      let updatedLiveStreams = Object.values(liveStreams)
-      this.setState({ assignments: updatedLiveStreams })
-  })
- }
-
   render() {
     return (
         <Layout>

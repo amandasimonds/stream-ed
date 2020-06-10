@@ -6,12 +6,12 @@ import axios from "../../../axios"
 
 class NewAnnouncement extends Component {
     state = {
+        postType: "Announcement",
         title: "",
         content: "",
         author: "",
-        postType: "announcement",
+        date: "",
         submitted: false,
-        date: ""
     }
 
     componentDidMount() {

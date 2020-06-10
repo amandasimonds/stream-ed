@@ -7,14 +7,14 @@ import Layout from "../../layout/Layout"
 
 class NewLiveStream extends Component {
     state = {
+        postType: "LiveStream",
         title: "",
         content: "",
-        author: "",
-        postType: "liveStream",
-        submitted: false,
+        author: "", 
         date: "",
         time: "",
         subject: "",
+        submitted: false,
     }
 
     componentDidMount() {

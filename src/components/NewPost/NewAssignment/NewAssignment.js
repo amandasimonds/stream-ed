@@ -7,13 +7,14 @@ import Layout from "../../layout/Layout"
 
 class NewAssignment extends Component {
     state = {
+        postType: "Assignment",
+        date: "",
         title: "",
         content: "",
         author: "",
-        postType: "assignment",
-        submitted: false,
-        date: "",
+        assignmentType: "",
         subject: "",
+        submitted: false, 
     }
 
     componentDidMount() {
@@ -53,15 +54,16 @@ class NewAssignment extends Component {
                     <hr />
                     <input type="text" placeholder="Title" value={this.state.title} onChange={(event) => this.setState({ title: event.target.value })} />
                     <input type="text" placeholder="Subject" value={this.state.subject} onChange={(event) => this.setState({ subject: event.target.value })} />
-
-                    {/* <div>
-                    <input type="radio" name="assignmentType" id="Classwork" value={this.state.assignmentType} onChange={(event) => this.setState({ assignmentType: event.target.value })} />
-                    <label for="Classwork">Classwork</label>
-                    <input type="radio" name="assignmentType" id="Homework" value={this.state.assignmentType} onChange={(event) => this.setState({ assignmentType: event.target.value })} />
-                    <label for="Homework">Homework</label>
-                    <input type="radio" name="assignmentType" id="Test" value={this.state.assignmentType} onChange={(event) => this.setState({ assignmentType: event.target.value })} />
-                    <label for="Test">Test</label>
-                    </div> */}
+<br/>
+                    Choose Assignment Type:
+                    <div>
+  <select id="assignmentType" onChange={(event) => {this.setState({assignmentType: event.target.value})}}>
+    <option value="Classwork">Classwork</option>
+    <option value="Homework">Homework</option>
+    <option value="Test">Test</option>
+  </select>
+</div>
+<br/>
 
                     <textarea rows="4" placeholder="Content/Instructions" value={this.state.content} onChange={(event) => this.setState({ content: event.target.value })} />
                 Assignment Due Date:
