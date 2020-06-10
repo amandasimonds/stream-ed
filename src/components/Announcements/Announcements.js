@@ -1,26 +1,42 @@
 import React, {Component} from 'react';
 import classes from "./Announcements.css";
+import axios from "../../axios"
 
 class Announcements extends Component {
 
     state = {
-        announcements:[
-            "Talent Show 3/12",
-            "Social Studies Project due 4/2"
-        ]
+        announcements:[]
     }
 
-    render(){  
-        let announcements = (this.state.announcements)
-            .map(key => {
-                return <div key={key} className={classes.announcement}>{key}</div>
+    componentDidMount(){
+        axios.get("/announcements.json")
+            .then(response => {
+                let announcements = response.data;
+                if(!announcements){
+                    return
+                } else {
+                let updatedAnnouncements = Object.values(announcements)
+                this.setState({ announcements: updatedAnnouncements })
+                }
             })
-            console.log("mapped announcements", announcements)
+        }
+    
+    render(){  
 
+        const announcementsBox=[]
+
+        for (let i = 0; i < this.state.announcements.length; i++) {
+            announcementsBox.push(
+                <div>
+                <div className={classes.announcement}>{this.state.announcements[i].title}<br/>{this.state.announcements[i].date}</div><br/>
+                </div>
+            )
+        }
+        
         return (
             <div className={classes.announcements}>
             <h1>Announcements</h1>
-            <div>{announcements}</div>
+            <div>{announcementsBox}</div>
         </div>
     )
 }

@@ -20,13 +20,6 @@ class StreamContent extends Component {
             { type: "Subject", text: "math" },
             { type: "Subject", text: "language arts" },
         ],
-        posts2: [
-            { type: "Assignment", title: "Social Studies Assignment", text: "Complete the world adventures program at this link: www.worldadventures.com" },
-            { type: "Announcement", title: "Talent Show", text: "Sign up for the talent show here" },
-            { type: "LiveStream", title: "Language Arts Live Seminar", text: "Required: Participation in LA Live Stream May 20" },
-            { type: "Assignment", title: "Art Assignment", text: "Sketch 3 thumbnails about your personal narrative project" }
-        ],
-        // posts:[],
         assignments:[],
         liveStreams:[],
         announcements:[]
