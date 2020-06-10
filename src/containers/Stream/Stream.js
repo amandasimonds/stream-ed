@@ -6,6 +6,7 @@ import Layout from "../../components/layout/Layout"
 import StreamContent from '../../components/StreamContent/StreamContent';
 import NewAssignment from '../../components/NewPost/NewAssignment/NewAssignment';
 import NewAnnouncement from '../../components/NewPost/NewAnnouncement/NewAnnouncement';
+import NewLiveStream from "../../components/NewPost/NewLiveStream/NewLiveStream";
 import MyWork from "../MyWork/MyWork"
 
 class Stream extends Component {
@@ -30,6 +31,7 @@ class Stream extends Component {
         <Route path ="/stream" component={StreamContent}/>
         <Route path ="/newassignment" component={NewAssignment}/>
         <Route path ="/newannouncement" component={NewAnnouncement}/>
+        <Route path ="/newlivestream" component={NewLiveStream}/>
         <Route path ="/mywork" component={MyWork}/>
         </Switch>
 
