@@ -9,7 +9,7 @@ class NewAnnouncement extends Component {
         title: "",
         content: "",
         author: "",
-        type: "announcement",
+        postType: "announcement",
         submitted: false,
         date: ""
     }
@@ -23,19 +23,22 @@ class NewAnnouncement extends Component {
             title: this.state.title,
             body: this.state.content,
             author: this.state.author,
-            date: this.state.date
+            date: this.state.date,
+            postType: "announcement"
         }
 
-        axios.post("/", data)
+        axios.post("/announcements.json", data)
             .then(response => {
                 console.log(response)
                 this.setState({ submitted: true })
             })
+            .catch(error =>console.log(error))
     }
 
     render() {
         let redirect = null
         if (this.state.submitted) {
+            alert(`Your announcement, "${this.state.title}" was posted!`)
             redirect = <Redirect to="/stream" />
         }
         return (

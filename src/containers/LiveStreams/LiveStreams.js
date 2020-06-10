@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Layout from "../../components/layout/Layout"
 import classes from "./LiveStreams.css";
+import "./LiveStreams.css"
 
 class LiveStreams extends Component {
   state = {
@@ -20,6 +21,9 @@ class LiveStreams extends Component {
         <Layout>
           <div className={classes.LiveStreams}>
             <h1>Live Streams</h1>
+            <table>
+              <tr>Hello</tr>
+            </table>
           </div>
         </Layout>
     );

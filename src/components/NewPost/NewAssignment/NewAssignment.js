@@ -10,10 +10,10 @@ class NewAssignment extends Component {
         title: "",
         content: "",
         author: "",
-        type: "assignment",
+        postType: "assignment",
         submitted: false,
         date: "",
-        subject: ""
+        subject: "",
     }
 
     componentDidMount() {
@@ -27,7 +27,8 @@ class NewAssignment extends Component {
             author: this.state.author,
             subject: this.state.subject,
             assignmentType: this.state.assignmentType,
-            date: this.state.date
+            date: this.state.date,
+            postType: "assignment"
         }
         axios.post("/assignments.json", data)
             .then(response => {
@@ -40,6 +41,7 @@ class NewAssignment extends Component {
     render() {
         let redirect = null
         if (this.state.submitted) {
+            alert(`Your assignment, "${this.state.title}" was posted!`)
             redirect = <Redirect to="/stream" />
         }
         return (
