@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import {Route} from "react-router-dom"
+
+import axios from "../../axios"
 
 import classes from "./StreamContent.css"
 import Filters from "./Filters/Filters"
 import StreamPosts from "./StreamPosts/StreamPosts";
-import MyWork from "../../containers/MyWork/MyWork"
+
 // import Layout from "../layout/Layout"
 
 class StreamContent extends Component {
@@ -23,12 +24,37 @@ class StreamContent extends Component {
             { type: "Announcement", title: "Talent Show", text: "Sign up for the talent show here" },
             { type: "LiveStream", title: "Language Arts Live Seminar", text: "Required: Participation in LA Live Stream May 20" },
             { type: "Assignment", title: "Art Assignment", text: "Sketch 3 thumbnails about your personal narrative project" }
-        ]
+        ],
+        posts2:[]
     }
+
+    componentDidMount() {
+        axios.get("/assignments.json")
+            .then(response => {
+                let assignments = response.data;
+                let updatedAssignments = Object.values(assignments)
+                this.setState({ assignments: updatedAssignments })
+            })
+        
+            axios.get("/announcements.json")
+            .then(response => {
+                let announcements = response.data;
+                let updatedAnnouncements = Object.values(announcements)
+                this.setState({ assignments: updatedAnnouncements })
+            })
+        
+            axios.get("/liveStreams.json")
+            .then(response => {
+                let liveStreams = response.data;
+                let updatedLiveStreams = Object.values(liveStreams)
+                this.setState({ assignments: updatedLiveStreams })
+            })
+    };
+
+
     render() {
         return (
             <div className={classes.StreamContent}>
-
                 <div>
                     <Filters
                         filters={this.state.filters}
@@ -43,8 +69,6 @@ class StreamContent extends Component {
                         title={this.state.posts.title}
                         text={this.state.posts.text} />
                 </div>
-
-                <Route path="/mywork" component={MyWork}/>
 
             </div>
 

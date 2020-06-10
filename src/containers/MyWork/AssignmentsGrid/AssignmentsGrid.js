@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import axios from "../../../axios"
 
-import Aux from "../../../hoc/Auxiliary"
 import classes from "./AssignmentsGrid.css"
 
 import FilterItem from "../../../components/StreamContent/Filters/FilterItem/FilterItem";
