@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import axios from "axios";
 
 import Layout from "../../components/layout/Layout"
 import classes from "./LiveStreams.css";
 import "./LiveStreams.css"
+
+import LiveStreamsGrid from "./LiveStreamsGrid/LiveStreamsGrid"
 
 class LiveStreams extends Component {
   state = {
@@ -16,15 +19,19 @@ class LiveStreams extends Component {
     },
  }
 
+ componentDidMount(){
+  axios.get("/liveStreams.json")
+  .then(response => {
+      let liveStreams = response.data;
+      let updatedLiveStreams = Object.values(liveStreams)
+      this.setState({ assignments: updatedLiveStreams })
+  })
+ }
+
   render() {
     return (
         <Layout>
-          <div className={classes.LiveStreams}>
-            <h1>Live Streams</h1>
-            <table>
-              <tr>Hello</tr>
-            </table>
-          </div>
+         <LiveStreamsGrid/>
         </Layout>
     );
   }
