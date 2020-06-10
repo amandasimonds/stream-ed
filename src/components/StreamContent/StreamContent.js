@@ -26,7 +26,7 @@ class StreamContent extends Component {
             { type: "LiveStream", title: "Language Arts Live Seminar", text: "Required: Participation in LA Live Stream May 20" },
             { type: "Assignment", title: "Art Assignment", text: "Sketch 3 thumbnails about your personal narrative project" }
         ],
-        posts:[],
+        // posts:[],
         assignments:[],
         liveStreams:[],
         announcements:[]
@@ -69,8 +69,10 @@ class StreamContent extends Component {
 
     render() {
 
+       const posts=[]
+
         for (let i = 0; i < this.state.assignments.length; i++) {
-            this.state.posts.push(
+            posts.push(
                 <StreamPost
                     // key={}
                     postType={this.state.assignments[i].postType}
@@ -81,7 +83,7 @@ class StreamContent extends Component {
         }
 
         for (let i = 0; i < this.state.announcements.length; i++) {
-            this.state.posts.push(
+            posts.push(
                 <StreamPost
                     // key={}
                     postType={this.state.announcements[i].postType}
@@ -92,7 +94,7 @@ class StreamContent extends Component {
         }
 
         for (let i = 0; i < this.state.liveStreams.length; i++) {
-            this.state.posts.push(
+            posts.push(
                 <StreamPost
                     // key={}
                     postType={this.state.liveStreams[i].postType}
@@ -115,7 +117,7 @@ class StreamContent extends Component {
                 <br />
 
                 <div>
-                    {this.state.posts}
+                    {posts}
                 </div>
 
             </div>
