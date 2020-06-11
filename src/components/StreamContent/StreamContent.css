@@ -6,6 +6,7 @@
     width:80%;
     margin: auto;
     height:100%;
+    float: left;
 }
 
 @media (max-width:500px) {

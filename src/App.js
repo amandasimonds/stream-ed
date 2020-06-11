@@ -10,6 +10,7 @@ import LogIn from "./components/LandingPage/LogIn/LogIn"
 import SignUp from "./components/LandingPage/SignUp/SignUp"
 import NewAnnouncement from "./components/NewPost/NewAnnouncement/NewAnnouncement"
 import NewAssignment from "./components/NewPost/NewAssignment/NewAssignment"
+import NewLiveStream from "./components/NewPost/NewLiveStream/NewLiveStream"
 import MyWork from "./containers/MyWork/MyWork"
 import LiveStreams from "./containers/LiveStreams/LiveStreams"
 
@@ -33,6 +34,7 @@ class App extends Component {
           <Switch>
             <Route path="/newassignment" component={NewAssignment} />
             <Route path="/newannouncement" component={NewAnnouncement} />
+            <Route path ="/newlivestream" component={NewLiveStream}/>
             <Route path="/mywork" component={MyWork}/>
             <Route path="/livestreams" component={LiveStreams}/>
           </Switch>

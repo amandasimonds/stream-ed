@@ -20,6 +20,7 @@ const SideDrawer = (props) => {
             <Announcements/>
             <Link to="/newassignment"><Button btnType="Success" style={{width:"200px"}}>Create Assignment</Button></Link>
             <Link to="/newannouncement"><Button btnType="Success" style={{width:"200px"}}>Create Announcement</Button></Link>
+            <Link to="/newlivestream"><Button btnType="Success" style={{width:"200px"}}>Create a Live Stream</Button></Link>
         </div>
         </Aux>
     )
