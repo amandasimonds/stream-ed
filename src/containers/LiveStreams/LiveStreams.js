@@ -12,12 +12,12 @@ class LiveStreams extends Component {
     email: "",
     password: "",
     loggedIn: false,
-    user : {
+    user: {
       name: "Amanda",
       type: "Student",
-      homeroom: "Mrs. Wellman"
+      homeroom: "Mrs. Wellman",
     },
- }
+  };
 
   render() {
     return (
