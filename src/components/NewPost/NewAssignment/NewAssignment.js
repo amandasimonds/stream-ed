@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import axios from "../../../axios";
 import { Redirect } from "react-router-dom";
 import classes from "../NewPost.css";
@@ -6,20 +7,20 @@ import classes from "../NewPost.css";
 import Layout from "../../layout/Layout";
 
 class NewAssignment extends Component {
-  state = {
-    postType: "Assignment",
-    date: "",
-    title: "",
-    content: "",
-    author: "",
-    assignmentType: "",
-    subject: "",
-    submitted: false,
-  };
+    state = {
+        postType: "Assignment",
+        date: "",
+        title: "",
+        content: "",
+        author: "",
+        assignmentType: "",
+        subject: "",
+        submitted: false, 
+    }
 
-  componentDidMount() {
-    console.log(this.props);
-  }
+    componentDidMount() {
+        console.log(this.props)
+    }
 
   postDataHandler = () => {
     const data = {

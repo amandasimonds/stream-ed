@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-// import axios from "axios";
+import React, { Component } from 'react';
+import axios from "axios";
 
-import Layout from "../../components/layout/Layout";
-// import classes from "./LiveStreams.css";
-import "./LiveStreams.css";
+import Layout from "../../components/layout/Layout"
+import classes from "./LiveStreams.css";
+import "./LiveStreams.css"
 
-import LiveStreamsGrid from "./LiveStreamsGrid/LiveStreamsGrid";
+import LiveStreamsGrid from "./LiveStreamsGrid/LiveStreamsGrid"
 
 class LiveStreams extends Component {
   state = {
@@ -21,9 +21,9 @@ class LiveStreams extends Component {
 
   render() {
     return (
-      <Layout>
-        <LiveStreamsGrid />
-      </Layout>
+        <Layout>
+         <LiveStreamsGrid/>
+        </Layout>
     );
   }
 }
