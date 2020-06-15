@@ -5,6 +5,7 @@ import { Redirect } from "react-router-dom";
 import classes from "../NewPost.css";
 
 import Layout from "../../layout/Layout";
+import TagsInput from "../TagsInput.js";
 
 class NewAssignment extends Component {
     state = {
@@ -16,6 +17,7 @@ class NewAssignment extends Component {
         assignmentType: "",
         subject: "",
         submitted: false, 
+        tags:[]
     }
 
     componentDidMount() {
@@ -42,6 +44,8 @@ class NewAssignment extends Component {
   };
 
   render() {
+    const selectedTags = tags => console.log(tags)
+    
     let redirect = null;
     if (this.state.submitted) {
       alert(`Your assignment, "${this.state.title}" was posted!`);
@@ -92,6 +96,7 @@ class NewAssignment extends Component {
             value={this.state.date}
             onChange={(event) => this.setState({ date: event.target.value })}
           />
+          <TagsInput selectedTags={selectedTags}/>
           <hr />
           <button onClick={this.postDataHandler}>Create Assignment</button>
         </div>

@@ -89,7 +89,6 @@ class StreamContent extends Component {
         for (let i = 0; i < this.state.liveStreams.length; i++) {
             posts.push(
                 <StreamPost
-                    // key={}
                     postType={this.state.liveStreams[i].postType}
                     title={this.state.liveStreams[i].title}
                     body={this.state.liveStreams[i].body}
