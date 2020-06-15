@@ -20,6 +20,11 @@ class NewAssignment extends Component {
         tags:[]
     }
 
+    constructor(props){
+      super(props)
+      this.addTagsHandler = this.addTagsHandler.bind(this)
+    }
+
     componentDidMount() {
         console.log(this.props)
     }
@@ -33,19 +38,28 @@ class NewAssignment extends Component {
       assignmentType: this.state.assignmentType,
       date: this.state.date,
       postType: "assignment",
+      tags: this.state.tags
     };
     axios
       .post("/assignments.json", data)
       .then((response) => {
         console.log(response);
-        this.setState({ submitted: true });
+        this.setState(
+          { submitted: true }
+          );
+        this.state.tags.push(data.subject, data.postType, data.assignmentType, data.author)
       })
       .catch((error) => console.log(error));
+      console.log("assignments state", this.state)
   };
 
+  addTagsHandler(selectedTags){
+    this.state.tags.push(selectedTags);
+    console.log(this.state.tags)
+    }
+
   render() {
-    const selectedTags = tags => console.log(tags)
-    
+
     let redirect = null;
     if (this.state.submitted) {
       alert(`Your assignment, "${this.state.title}" was posted!`);
@@ -67,17 +81,24 @@ class NewAssignment extends Component {
             type="text"
             placeholder="Subject"
             value={this.state.subject}
-            onChange={(event) => this.setState({ subject: event.target.value })}
+            onChange={(event) => {
+              this.setState({ subject: event.target.value })
+              }
+            }
           />
           <br />
           Choose Assignment Type:
           <div>
             <select
+              required
               id="assignmentType"
               onChange={(event) => {
-                this.setState({ assignmentType: event.target.value });
+                this.setState(
+                  { assignmentType: event.target.value }
+                );
               }}
             >
+              <option></option>
               <option value="Classwork">Classwork</option>
               <option value="Homework">Homework</option>
               <option value="Test">Test</option>
@@ -96,7 +117,9 @@ class NewAssignment extends Component {
             value={this.state.date}
             onChange={(event) => this.setState({ date: event.target.value })}
           />
-          <TagsInput selectedTags={selectedTags}/>
+          {/* <TagsInput 
+            addTagsHandler={(event) => this.addTagsHandler(event)}
+            /> */}
           <hr />
           <button onClick={this.postDataHandler}>Create Assignment</button>
         </div>

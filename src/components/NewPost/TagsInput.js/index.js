@@ -10,7 +10,7 @@ class TagsInput extends Component {
         
         const addTags = event => {
             if (event.key === "Enter" && event.target.value !== "") {
-                this.state.tags.push(event.target.value);
+                this.props.addTags.push(event.target.value);
                 event.target.value=""
                 console.log(this.state.tags)
             }
@@ -25,7 +25,7 @@ class TagsInput extends Component {
                 <ul>
                     {this.state.tags.map((tag, index) => (
                         <li key={index}>
-                            <span>{tag}</span>
+                            <span>{this.state.tags}</span>
                             <i 
                                 className="material-icons"
                                 onClick={()=> removeTags(index)}
@@ -36,7 +36,7 @@ class TagsInput extends Component {
                 <input 
                     type="text"
                     placeholder="add tags here"
-                    onKeyUp={event => addTags(event)}
+                    onKeyUp={selectedTags => this.props.addTagsHandler(selectedTags)}
                 />
             </div>
         )
