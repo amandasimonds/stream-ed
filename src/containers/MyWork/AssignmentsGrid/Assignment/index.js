@@ -1,8 +1,8 @@
 import React from "react";
-import classes from "./LiveStream.css";
+import classes from "./Assignment.css";
 import Aux from "../../../../hoc";
 
-const LiveStream = (props) => (
+const Assignment = (props) => (
   <Aux>
     <div className={classes.subject}>{props.subject}</div>
     <div className={classes.type}>{props.type}</div>
@@ -11,4 +11,4 @@ const LiveStream = (props) => (
   </Aux>
 );
 
-export default LiveStream;
+export default Assignment;
