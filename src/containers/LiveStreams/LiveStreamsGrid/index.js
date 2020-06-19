@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "../../../utils/axios";
 
-import { classes } from "./LiveStreamsGrid.css";
+import classes from "./LiveStreamsGrid.css";
 
 import FilterItem from "../../../components/StreamContent/Filters/FilterItem";
 import LiveStream from "./LiveStream/LiveStream";
