@@ -5,7 +5,7 @@ import { Redirect } from "react-router-dom";
 import classes from "../NewPost.css";
 
 import Layout from "../../layout";
-import TagsInput from "../TagsInput.js";
+// import TagsInput from "../TagsInput.js";
 
 class NewAssignment extends Component {
     state = {
