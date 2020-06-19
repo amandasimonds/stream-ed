@@ -1,4 +1,4 @@
-import app from "firebase/app";
+import * as firebase from "firebase/app";
 import "firebase/auth";
 import "firebase/database";
 
@@ -15,15 +15,16 @@ const firebaseConfig = {
 
 class Firebase {
   constructor() {
-    app.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
 
-    this.auth = app.auth();
+    this.auth = firebase.auth();
+    this.db = firebase.database();
   }
   createStreamUser = (email, password) =>
-    this.auth.createStreamUser(email, password);
+    this.auth.createUserWithEmailAndPassword(email, password);
 
   signInStreamUser = (email, password) =>
-    this.auth.signInStreamUser(email, password);
+    this.auth.signInWithEmailAndPassword(email, password);
 
   resetPassword = (password) => this.auth.currentUser.resetPassword(password);
 

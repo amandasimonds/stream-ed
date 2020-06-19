@@ -34,7 +34,7 @@ const landingPage = (props) => {
           {" "}
           <button className={classes.button}>
             {" "}
-            Sign Up <i class="fab fa-suse"> </i>
+            Sign Up <i className="fab fa-suse"> </i>
           </button>{" "}
         </Link>
       </div>{" "}

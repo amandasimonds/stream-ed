@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import { Button, Input } from "reactstrap";
 import { withFirebase } from "../../../providers";
 import classes from "../LandingPage.css";
-
 const SignUp = () => (
   <div className={classes.background}>
     <div className={classes.form}>
@@ -69,7 +67,7 @@ class SignUpFormBase extends Component {
     return (
       <form onSubmit={this.onSubmit}>
         <hr />
-        <Input
+        <input
           className={classes.inputStyle}
           type="text"
           name="username"
@@ -78,7 +76,7 @@ class SignUpFormBase extends Component {
           onChange={this.onChange}
         />
 
-        <Input
+        <input
           className={classes.inputStyle}
           type="text"
           name="email"
@@ -86,7 +84,7 @@ class SignUpFormBase extends Component {
           value={email}
           onChange={this.onChange}
         />
-        <Input
+        <input
           className={classes.inputStyle}
           type="password"
           name="passwordOne"
@@ -94,7 +92,7 @@ class SignUpFormBase extends Component {
           value={passwordOne}
           onChange={this.onChange}
         />
-        <Input
+        <input
           className={classes.inputStyle}
           type="password"
           name="passwordTwo"
@@ -104,9 +102,9 @@ class SignUpFormBase extends Component {
         />
         <br />
 
-        <Button className={classes.button} disabled={isInvalid} type="submit">
+        <button className={classes.button} disabled={isInvalid} type="submit">
           Sign Up
-        </Button>
+        </button>
         <br />
         {error && <p>{error.message}</p>}
       </form>
