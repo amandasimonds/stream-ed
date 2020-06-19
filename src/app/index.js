@@ -11,7 +11,7 @@ import NewAssignment from "../components/NewPost/NewAssignment";
 import NewLiveStream from "../components/NewPost/NewLiveStream";
 import MyWork from "../containers/MyWork";
 import LiveStreams from "../containers/LiveStreams/";
-
+import { withAuthentication } from "../providers/session";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (
@@ -30,4 +30,4 @@ const App = () => (
   </Router>
 );
 
-export default App;
+export default withAuthentication(App);
