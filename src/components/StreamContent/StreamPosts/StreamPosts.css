@@ -1,4 +1,9 @@
+
+/* Stream Posts Grid */
 .StreamPosts {
-    float: left;
-    padding:0 0 0 10px;
+    max-width:80%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    border: 1px solid red;
 }
+

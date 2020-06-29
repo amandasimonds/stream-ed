@@ -95,17 +95,19 @@ class StreamContent extends Component {
     console.log("updated posts:", this.state.posts);
 
     return (
-      <div className={classes.StreamContent}>
-        <div>
+      <div className={classes.container}>
+
+        <div class={classes.FiltersContainer}>
           <Filters
             filters={this.state.filters}
             text={this.state.filters.text}
           />
         </div>
 
-        <br />
+        <div className={classes.StreamContent}>
+        {posts}
+        </div>
 
-        <div>{posts}</div>
       </div>
     );
   }

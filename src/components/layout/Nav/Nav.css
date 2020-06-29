@@ -1,6 +1,8 @@
 .Category {
+    display: inline-block;
     height: 60px;
-    width: 200px;
+    width: 25%;
+    margin: 10px;
     font-family: 'Chelsea Market', cursive;
     font-size: 1.4rem;
     background-color: #38c3f6;
@@ -9,7 +11,12 @@
     cursor: pointer;
 }
 
-.CategoryContainer{
+.Category:hover{
+    transform:scale(1.1);
+    transition: all .2s
+}
+
+/* .CategoryContainer{
     display: flex;
     justify-content: space-between;
     padding: 0 90px 0 90px;
@@ -18,6 +25,16 @@
     width:80%;
     position: relative;
     left:50px;
+    box-sizing: border-box;
+} */
+
+.CategoryContainer{
+    text-align: center;
+    top:70px;
+    width:80%;
+    position: relative;
+    margin: 0 auto;
+    display: block;
     box-sizing: border-box;
 }
 
