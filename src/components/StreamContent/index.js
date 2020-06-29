@@ -4,7 +4,7 @@ import axios from "../../utils/axios";
 
 import classes from "./StreamContent.css";
 import Filters from "./Filters";
-import StreamPost from "./StreamPosts/StreamPost";
+import StreamPost from "./StreamPost";
 
 class StreamContent extends Component {
   state = {
@@ -19,6 +19,7 @@ class StreamContent extends Component {
     assignments: [],
     liveStreams: [],
     announcements: [],
+    streamPosts:[]
   };
 
   componentDidMount() {
@@ -59,7 +60,7 @@ class StreamContent extends Component {
     for (let i = 0; i < this.state.assignments.length; i++) {
       posts.push(
         <StreamPost
-          // key={}
+          key={this.state.assignments[i].title}
           postType={this.state.assignments[i].postType}
           title={this.state.assignments[i].title}
           body={this.state.assignments[i].body}
@@ -71,7 +72,7 @@ class StreamContent extends Component {
     for (let i = 0; i < this.state.announcements.length; i++) {
       posts.push(
         <StreamPost
-          // key={}
+          key={this.state.announcements[i].title}
           postType={this.state.announcements[i].postType}
           title={this.state.announcements[i].title}
           body={this.state.announcements[i].body}
@@ -83,7 +84,7 @@ class StreamContent extends Component {
     for (let i = 0; i < this.state.liveStreams.length; i++) {
       posts.push(
         <StreamPost
-          // key={}
+          key={this.state.liveStreams[i].title}
           postType={this.state.liveStreams[i].postType}
           title={this.state.liveStreams[i].title}
           body={this.state.liveStreams[i].body}
@@ -97,7 +98,7 @@ class StreamContent extends Component {
     return (
       <div className={classes.container}>
 
-        <div class={classes.FiltersContainer}>
+        <div className={classes.FiltersContainer}>
           <Filters
             filters={this.state.filters}
             text={this.state.filters.text}

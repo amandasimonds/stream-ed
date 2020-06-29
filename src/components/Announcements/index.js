@@ -25,7 +25,7 @@ class Announcements extends Component {
     for (let i = 0; i < this.state.announcements.length; i++) {
       announcementsBox.push(
         <div>
-          <div className={classes.announcement}>
+          <div key={this.state.announcements[i].title} className={classes.announcement}>
             {this.state.announcements[i].title}
             <br />
             {this.state.announcements[i].date}
