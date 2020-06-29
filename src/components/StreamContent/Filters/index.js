@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import classes from "./Filters.css";
 import FilterItem from "./FilterItem";
 
 class Filters extends Component {
@@ -11,7 +10,7 @@ class Filters extends Component {
   render() {
     return this.props.filters.map((filter, key) => {
       return (
-        <div key={key} className={classes.Filters}>
+        <div key={key}>
           <FilterItem filterType={filter.type}>{filter.text}</FilterItem>
         </div>
       );

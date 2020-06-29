@@ -8,7 +8,7 @@
     height:35vh;
     border-radius: 7px;
     border: 1px solid rgb(161, 161, 161);
-    display: flex;
+    /* display: flex; */
     flex-flow: column;
     cursor: pointer;
     text-align: left;
@@ -68,7 +68,7 @@
 @media (max-width:500px) {
     .StreamPost {
         font-size: 0.75rem;
-        width: 85%;
+        width: 95%;
         padding:8px;
     }
 }

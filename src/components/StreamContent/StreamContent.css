@@ -1,17 +1,31 @@
+.container{
+    width:95%;
+    margin: auto;
+}
+
 .StreamContent {
+    position: relative;
     text-align: center;
-    height: auto;
-    display: flex;
-    flex-flow:column;
+    display: block;
     width:80%;
     margin: auto;
-    height:100%;
-    float: left;
+}
+
+.FiltersContainer{
+    width:80%;
+    left:120px;
+    position: relative;
+    margin: auto;
+    display: inline-block;
 }
 
 @media (max-width:500px) {
     .StreamContent {
         margin: 5px auto;
         padding: 5px;
+    }
+
+    .FiltersContainer{
+        left:30px;
     }
 }
