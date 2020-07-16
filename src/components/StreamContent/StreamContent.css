@@ -1,36 +1,46 @@
+.container {
+  width: 95%;
+  margin: auto;
+}
+
 .StreamContent {
-    text-align: center;
-    height: auto;
-    display: flex;
-    flex-flow: column;
-    width: 80%;
-    margin: auto;
-    height: 100%;
-    float: left;
+  position: relative;
+  text-align: center;
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+.FiltersContainer {
+  width: 80%;
+  left: 120px;
+  position: relative;
+  margin: auto;
+  display: inline-block;
 }
 
 .Posts {
-    padding: inherit;
-    margin: inherit;
+  padding: inherit;
+  margin: inherit;
 }
 
 .Filters {
-    margin: 1em auto 0;
-    display: unset;
+  margin: 1em auto 0;
+  display: unset;
 }
 
-@media (max-width:500px) {
-    .StreamContent {
-        margin: 5px auto;
-        padding: 5px;
-    }
+@media (max-width: 500px) {
+  .StreamContent {
+    margin: 5px auto;
+    padding: 5px;
+  }
 
-    .Posts {
-        margin: 1em auto 0;
-        display: contents;
-    }
+  .Posts {
+    margin: 1em auto 0;
+    display: contents;
+  }
 
-    .Filters {
-        margin: 1em 2em 0;
-    }
+  .Filters {
+    margin: 1em 2em 0;
+  }
 }

@@ -4,7 +4,7 @@ import axios from "../../utils/axios";
 
 import classes from "./StreamContent.css";
 import Filters from "./Filters";
-import StreamPost from "./StreamPosts/StreamPost";
+import StreamPost from "./StreamPost";
 
 class StreamContent extends Component {
   state = {
@@ -42,6 +42,7 @@ class StreamContent extends Component {
     assignments: [],
     liveStreams: [],
     announcements: [],
+    streamPosts: [],
   };
 
   componentDidMount() {

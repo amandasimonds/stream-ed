@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 // import Layout from "./components/layout/Layout";
 import Stream from "../containers/Stream";
@@ -16,7 +16,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => (
   <Router>
-    <div>
+    <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/login" component={LogIn} />
       <Route path="/signup" component={SignUp} />
@@ -26,7 +26,7 @@ const App = () => (
       <Route path="/newlivestream" component={NewLiveStream} />
       <Route path="/mywork" component={MyWork} />
       <Route path="/livestreams" component={LiveStreams} />
-    </div>
+    </Switch>
   </Router>
 );
 

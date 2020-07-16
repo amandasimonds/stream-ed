@@ -52,7 +52,9 @@ class Layout extends Component {
 
         <Nav />
 
-        <main className={classes.Content}>{this.props.children}</main>
+        <main className={classes.Content}>
+          {this.props.children}
+          </main>
       </Aux>
     );
   }
