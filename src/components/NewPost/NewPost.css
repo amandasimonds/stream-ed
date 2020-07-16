@@ -11,7 +11,7 @@
     text-align:center;
 }
 
-.NewPost input, textarea{
+.NewPost input, textarea, time{
     padding: 5px;
     border-radius:5px;
     margin:0 0 10px 0;

@@ -2,15 +2,35 @@
     text-align: center;
     height: auto;
     display: flex;
-    flex-flow:column;
-    width:80%;
+    flex-flow: column;
+    width: 80%;
     margin: auto;
-    height:100%;
+    height: 100%;
+    float: left;
+}
+
+.Posts {
+    padding: inherit;
+    margin: inherit;
+}
+
+.Filters {
+    margin: 1em auto 0;
+    display: unset;
 }
 
 @media (max-width:500px) {
     .StreamContent {
         margin: 5px auto;
         padding: 5px;
+    }
+
+    .Posts {
+        margin: 1em auto 0;
+        display: contents;
+    }
+
+    .Filters {
+        margin: 1em 2em 0;
     }
 }

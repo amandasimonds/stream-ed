@@ -1,8 +1,9 @@
 .StreamPost {
+    float: left;
     margin: 5px;
     padding: 15px;
-    height:auto;
-    width:200px;
+    height: auto;
+    width: 200px;
     border-radius: 2px;
     border: none;
     display: flex;
@@ -11,15 +12,15 @@
     text-align: left;
 }
 
-.Assignment {
+.assignment {
     background-color: #a9cf48;
 }
 
-.Announcement {
+.announcement {
     background-color: #00ac5b;
 }
 
-.LiveStream {
+.liveStream {
     background-color: #fedd22;
 }
 
@@ -31,6 +32,8 @@
     .StreamPost {
         font-size: 0.75rem;
         width: 220px;
-        padding:8px;
+        padding: 8px;
+        margin: 5px auto;
+        text-align: center;
     }
 }
