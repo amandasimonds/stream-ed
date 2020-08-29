@@ -75,6 +75,7 @@ class SignInFormBase extends Component {
             <Link to="/stream">Login</Link>
           </button>
           <br />
+          <p style={{fontSize:"11px"}}>If you get a blank page after logging in, please try changing route path from "/signin" to "/stream" :)</p>
         </form>
         {error && <p>{error.message}</p>}
       </div>

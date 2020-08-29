@@ -92,6 +92,7 @@ class SignUpFormBase extends Component {
           value={passwordOne}
           onChange={this.onChange}
         />
+        <p style={{fontSize:"11px"}}>Password must be 6 characters long</p>
         <input
           className={classes.inputStyle}
           type="password"
